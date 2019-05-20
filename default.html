@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.bg-img {
+	/* The image used */
+	background-image: url("BG_Image.png");
+	/* min-height: 840px;*/
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+	padding: 14px 16px;
+	opacity: 0.8;
+}
+
+.logoposition {
+	top: 30px;
+	left: 30px;
+	right: 1178px;
+	bottom: 697;
+}
+
+.logoimg {
+	logo-image: url("hunger.jpg");
+	height: 41px;
+	width: 72px;
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 41px;
+}
+
+.logintab {
+	top: 70px;
+	left: 141px;
+	height: 30px;
+	width: 170px;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px 0 0 4px;
+	background-color: #FFFFFF;
+}
+
+.loginfont {
+	top: 73px;
+	left: 199px;
+	right: 969px;
+	bottom: 668px;
+	height: 24px;
+	width: 54px;
+	color: #333333;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.registertab {
+	top: 70px;
+	left: 310px;
+	right: 800;
+	bottom: 668;
+	height: 30px;
+	width: 170px;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px 0 0 4px;
+	opacity: 100%;
+}
+
+.registerfont {
+	top: 73px;
+	left: 355px;
+	right: 846;
+	bottom: 671;
+	height: 24px;
+	width: 79px;
+	color: FFFFFF;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.emailid {
+	height: 19px;
+	width: 63px;
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 19px;
+}
+
+.rectangle {
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	height: 30px;
+	width: 339px;
+	border: 1px solid #9B9B9B;
+	opacity: 0.6;
+	border-radius: 4px;
+	background-color: #333333;
+}
+
+input[type=text]:focus {
+	border: 3px solid #555;
+}
+
+.password {
+	height: 19px;
+	width: 75px;
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 19px;
+}
+
+.emailcontainer {
+	top: 125;
+	left: 141;
+	right: 800;
+	bottom: 589;
+	height: 54px;
+	width: 339px;
+}
+
+.passwordcontainer {
+	top: 189;
+	left: 141;
+	right: 800;
+	bottom: 525;
+	height: 54px;
+	width: 339px;
+}
+
+.loginbutton [type=submit] {
+	top: 280px;
+	left: 290;
+	right: 852;
+	bottom: 449;
+	height: 35px;
+	width: 233px;
+	border: 1px solid #FDF5F7;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+}
+
+.loginbutton-text {
+	height: 24px;
+	width: 50px;
+	color: #333333;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+</style>
+</head>
+<body class="bg-img">
+	<div class="logoposition">
+		<img src="hunger.png" class="logoimg">
+	</div>
+	<button class="logintab">
+		<a class="loginfont" href="default.html">Login</a>
+	</button>
+	<button class="registertab">
+		<a class="registerfont" href="Registration.html">Register</a>
+	</button>
+	<form action="LoginServlet" method="post">
+		<div class="emailcontainer">
+			<label class="emailid" for="emailid"><b>Email id</b></label><br>
+			<input type="email" class="rectangle"
+				placeholder="Enter your Email id" name="email" required><br>
+		</div>
+
+		<div class="passwordcontainer">
+			<label class="password" for="password"><b>Password</b></label><br>
+			<input type="password" class="rectangle"
+				placeholder="Enter your password" name="password" required><br>
+		</div>
+		<div class="loginbutton">
+			<input type="submit" class="loginbutton-text" value="Login"> <br>
+
+			<div class="passwordcontainer">
+				<br>
+				<button type="reset" class="cancelbtn">Cancel</button>
+				<span class="emailid">Forgot <a href="#linkforresetpassword">password?</a></span><br>
+			</div>
+
+		</div>
+	</form>
+</body>
+</html>

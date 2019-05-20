@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Well Fed Nation</title>
+<style>
+body, html {
+  height: 100%;
+   margin: 0;
+  font-family: Arial, Helvetica, sans-serif ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("BG_Image.png");
+ /* min-height: 840px;*/
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  padding: 14px 16px;
+  opacity: 0.8;
+}
+.logoposition{
+top:30px;
+left:30px;
+right:1178px;
+bottom:697;
+}
+.logoimg{
+	logo-image: url("hunger.png");
+	height: 60px;
+	width: 92px; 
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 41px;
+}
+
+.logintab{
+	top : 70px;
+	left: 141px;
+	height: 30px;	
+	width: 170px;	
+	border: 1px solid #FFFFFF;	
+	border-radius: 4px 0 0 4px;	
+	background-color: #FFFFFF;
+	opacity:100%;
+
+}
+
+.loginfont{
+	top : 73px;
+	left :199px;
+	right : 969px;
+	bottom : 668px;
+	height: 24px;
+	width: 79px;
+	color: FFFFFF;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+
+}
+
+ 
+ .registertab {
+	top : 70px;
+ 	left: 310px;
+ 	right:800;
+ 	bottom:668;
+	height: 30px;
+	width: 170px;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px 0 0 4px;
+	opacity: 1.0;
+}
+.registerfont {
+	top : 73px;
+ 	left: 355px;
+ 	right:846;
+ 	bottom:671;
+	height: 24px;
+	width: 79px;
+	color: #333333;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.email-id {
+	height: 19px;
+	width: 63px;
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 19px;
+}
+
+.rectangle {
+	color: #FFFFFF;
+	height: 30px;
+	width: 339px;
+	border: 1px solid #9B9B9B;
+	opacity: 0.6;
+	border-radius: 4px;
+	background-color: #333333;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+.password {
+	height: 19px;
+	width: 75px;
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 19px;
+}
+.emailcontainer {
+  top:125px;
+  left:141px;
+  right:800px;
+  bottom:589px;
+  eight: 54px;
+  width: 339px;
+  
+}
+
+.passwordcontainer {
+  top:189px;
+  left:141px;
+  right:800px;
+  bottom:525px;
+	height: 54px;
+	width: 339px;
+}
+
+
+.loginbutton [type=submit]{
+	top: 671px;
+	left:193px;
+	right:854px;
+	bottom:62px;		
+	height: 35px;
+	width: 233px;
+	border: 1px solid #FDF5F7;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+}
+
+.loginbutton-text  {
+	height: 24px;
+	width: 50px;
+	color: #333333;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.containersignin {
+ 	color: #FFFFFF;
+	height: 30px;
+	width: 339px;
+	
+  
+}
+
+</style>
+</head>
+<body class="bg-img">
+ <div class="logoposition">
+    <img src="hunger.png" class="logoimg">
+ </div>
+<button class="logintab">
+<a class="loginfont" href="default.html">Login</a></button>
+
+<button class="registertab">
+<a class="registerfont" href="Registration.html" >Register</a></button>
+
+<form  action="RegistrationServlet" method="post">
+	<label class="email-id" for="email"><b>Email</b></label><br>
+	<input type="email" class= "rectangle" placeholder="This will also be your username" name="email" required><br>
+		
+	<label class="email-id" for="password"><b>Password</b></label><br>
+	<input type="password" class= "rectangle" placeholder="Enter Password" name="password" required><br>
+		    
+	<label class="email-id" for="psw-repeat"><b>Repeat Password</b></label><br>
+	<input type="password" class= "rectangle" placeholder="Repeat Password" name="psw-repeat" required ><br>
+		    
+	<label class="email-id" for="mobile"><b>Mobile Number</b></label><br>
+	<input type="tel" class= "rectangle" placeholder="Enter 10 digit mobile number" name="mobile" required><br>
+		
+	<label class="email-id" for="address"><b>Address</b></label><br>
+	<input type="text" class= "rectangle" placeholder="Enter your full address" name="address" required><br>
+	
+	<label class="email-id" for="address"><b>Postal Code</b></label><br>
+	<input type="text" class= "rectangle" name="postal" required><br>
+	
+	<label class="email-id" for="address"><b>City</b></label><br>
+	<input type="text" class= "rectangle" name="city" required><br>
+		   
+	<label class="email-id" for="pan"><b>Pan Card number/ GSTN</b></label><br>
+	<input type="text" class= "rectangle" placeholder="Enter your Pan Card number/GSTN" name="pan" required><br>
+		   
+	<label class="email-id" for="usertype"><b>I am </b></label><br>
+		    
+	<label class="email-id">Provider
+	<input type="checkbox" value="Provider" name="usertype">
+	<span class="checkmark"></span>
+	</label>
+		    
+		    
+	<label class="email-id">Delivery Staff
+	<input type="checkbox" value="Delivery" name="usertype">
+	<span class="checkmark"></span>
+	</label>
+		    
+		    
+	<label class="email-id">Receiver
+	<input type="checkbox" value="Reciever" name="usertype">
+	<span class="checkmark"></span>
+	</label>
+				    
+ 	<div class="loginbutton">
+ 	<button type="submit" class= "loginbutton-text">Register</button><br>
+ 	</div>
+ 	
+	<div class="containersignin">
+	<p>Already have an account? <a href="HOME.html">Sign in</a>.</p>
+	</div>
+ 	
+</form>
+</body>
+</html>
